@@ -17,7 +17,7 @@ const wallet = getWallet();
 // Get the chains for the environment.
 let selectedChains = ['Ethereum'];
 
-const chains = getEVMChains(env, selectedChains);
+const chains = getEVMChains(selectedChains);
 execute(chains, wallet, {
     args,
 });
