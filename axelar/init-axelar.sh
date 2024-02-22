@@ -72,13 +72,13 @@ $BINARY add-genesis-account governance ${ASSETS} \
 --keyring-backend test > /dev/null 2>&1 && echo "Added 'governance' to genesis account"
 
 
-## fund relayer wallet 
+## fund relayer wallet
 RELAYER_MNEMONIC="record gift you once hip style during joke field prize dust unique length more pencil transfer quit train device arrive energy sort steak upset"
 
 RELAYER_ADDRESS=$($BINARY keys add relayer --recover --keyring-backend test --home ${HOME_DIR} <<< $RELAYER_MNEMONIC | grep "address:" | awk '{ print $2 }')
 echo "Relayer address: $RELAYER_ADDRESS"
 
-$BINARY add-genesis-account relayer ${ASSETS} --home ${HOME_DIR} --keyring-backend test 
+$BINARY add-genesis-account relayer ${ASSETS} --home ${HOME_DIR} --keyring-backend test
 
 
 $BINARY set-genesis-mint --inflation-min 0 --inflation-max 0 --inflation-max-rate-change 0 --home ${HOME_DIR}

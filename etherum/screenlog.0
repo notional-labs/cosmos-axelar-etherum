@@ -1,0 +1,9 @@
+sh: line 1: 20561 Killed: 9               npm run start > $HOME/evm-log.txt 2>&1
+sh: line 1: 20920 Killed: 9               npm run start > $HOME/evm-log.txt 2>&1
+sh: line 1: 21313 Killed: 9               npm run start > $HOME/evm-log.txt 2>&1
+sh: line 1: 22845 Killed: 9               npm run start > $HOME/evm-log.txt 2>&1
+sh: line 1: 23602 Killed: 9               npm run start > $HOME/evm-log.txt 2>&1
+sh: line 1: 24520 Killed: 9               npm run start > $HOME/evm-log.txt 2>&1
+sh: line 1: 32033 Killed: 9               npm run start > $HOME/evm-log.txt 2>&1
+sh: line 1: 33369 Killed: 9               npm run start > $HOME/evm-log.txt 2>&1
+sh: line 1: 34421 Killed: 9               npm run start > $HOME/evm-log.txt 2>&1
