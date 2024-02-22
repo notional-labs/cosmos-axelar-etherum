@@ -36,7 +36,7 @@ if [ -z "$BINARY" ]; then
     BINARY=build/cudos-noded
 fi
 
-CHAIN_ID="cudos-node"
+CHAIN_ID="cudos"
 KEYRING="test"
 KEY="test0"
 KEY1="test1"

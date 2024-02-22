@@ -1,7 +1,7 @@
 {
   "type": "cosmos",
   "value": {
-    "key": "alice",
+    "key": "owner",
     "chain-id": "axelar",
     "rpc-addr": "http://localhost:26657",
     "grpc-addr": "",
