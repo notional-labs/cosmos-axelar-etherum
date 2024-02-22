@@ -68,6 +68,8 @@ $BINARY add-genesis-account $TEST2_ADDRESS "500000000000000000000000000${DENOM}"
 P2PPORT=16656
 RPCPORT=16657
 RESTPORT=1316
+GRPCPORT=8080
+GRPCWEB=8091
 
 sed -i -e 's#"tcp://0.0.0.0:26656"#"tcp://localhost:'"$P2PPORT"'"#g' $HOME_DIR/config/config.toml
 sed -i -e 's#"tcp://127.0.0.1:26657"#"tcp://localhost:'"$RPCPORT"'"#g' $HOME_DIR/config/config.toml
@@ -102,5 +104,4 @@ $BINARY collect-gentxs --home $HOME_DIR
 # Run this to ensure everything worked and that the genesis file is setup correctly
 # This raises an error since Cudos has an additional genesis Tx : MsgSetOrchestratorAddress
 # $BINARY validate-genesis --home $HOME_DIR
-
-screen -dmS cudos_node  $BINARY start --home $HOME_DIR
+$BINARY start --home $HOME_DIR --grpc.address="0.0.0.0:$GRPCPORT" --grpc-web.address="0.0.0.0:$GRPCWEB"
