@@ -1,0 +1,3 @@
+[submodule "cudos-node"]
+	path = cudos-node
+	url = git@kienn6034:CudoVentures/cudos-node.git
