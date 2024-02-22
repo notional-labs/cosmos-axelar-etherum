@@ -67,10 +67,12 @@ $BINARY add-genesis-account $TEST2_ADDRESS "500000000000000000000000000${DENOM}"
 
 P2PPORT=16656
 RPCPORT=16657
+RESTPORT=1316
 
 sed -i -e 's#"tcp://0.0.0.0:26656"#"tcp://localhost:'"$P2PPORT"'"#g' $HOME_DIR/config/config.toml
 sed -i -e 's#"tcp://127.0.0.1:26657"#"tcp://localhost:'"$RPCPORT"'"#g' $HOME_DIR/config/config.toml
 sed -i -e 's#"tcp://localhost:26657"#"tcp://localhost:'"$RPCPORT"'"#g' $HOME_DIR/config/client.toml
+sed -i -e 's#"tcp://0.0.0.0:1317"#"tcp://0.0.0.0:'"$RESTPORT"'"#g' $HOME_DIR/config/app.toml
 
 update_test_genesis '.app_state["gov"]["voting_params"]["voting_period"]="50s"'
 update_test_genesis '.app_state["mint"]["params"]["mint_denom"]="'$DENOM'"'
