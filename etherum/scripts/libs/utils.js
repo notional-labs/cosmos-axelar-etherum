@@ -28,8 +28,7 @@ function checkWallet() {
  * @param {*} chains - The list of chains to get the chain objects for. If this is empty, the default chains will be used.
  * @returns {Chain[]} - The chain objects.
  */
-function getEVMChains(env, chains = []) {
-    checkEnv(env);
+function getEVMChains(chains = []) {
 
     const selectedChains = chains.length > 0 ? chains : getDefaultChains(env);
 

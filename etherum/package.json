@@ -13,6 +13,7 @@
         "start": "node scripts/runStart",
         "deploy": "node scripts/runDeploy",
         "execute": "node scripts/runExecute",
+        "send-token": "node scripts/runSendToken",
         "setup": "node scripts/runSetupEnv",
         "check-balance": "node scripts/runCheckBalance",
         "build": "rm -rf artifacts && npx hardhat clean && npx hardhat compile",

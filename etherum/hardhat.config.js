@@ -29,7 +29,8 @@ module.exports = {
         },
     },
     paths: {
-        sources: './examples',
-        artifacts: './artifacts',
-    },
+        sources: './contracts',
+        cache: "../_build/solidity/cache",
+        artifacts: '../_build/solidity/artifacts'
+    }
 };
