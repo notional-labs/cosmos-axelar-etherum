@@ -1,1 +1,0 @@
-# Cudos testnet deployment
