@@ -1,3 +1,8 @@
 [submodule "cudos-node"]
-	path = cudos-node
-	url = git@github.com:CudoVentures/cudos-node.git
+	path = deps/cudos-node
+	url = https://github.com/CudoVentures/cudos-node.git
+
+[submodule "axelar-core"]
+	path = deps/axelar-core
+	url = https://github.com/notional-labs/axelar-core.git
+	branch = 0.34.1-cudos-demo
