@@ -6,6 +6,7 @@ CHAIN_ID=axelar
 MONIKER=axelar
 HOME=testnet/axelar-testnet
 BINARY=${BINARY:-"_build/binary/axelard"}
+VALD_BINARY=${VALD_BINARY:-"_build/binary/vald"}
 
 # underscore so that go tool will not take gocache into account
 mkdir -p _build/gocache
@@ -14,11 +15,13 @@ export GOMODCACHE=$ROOT/_build/gocache
 # download and install $BINARY binary
 # check if _build/axelar-core folder exists
 if [ ! -d "_build/axelar-core" ]; then
+    echo "Cloning axelar-core repo..."
     git clone -b 0.34.1-cudos-demo https://github.com/notional-labs/axelar-core.git _build/axelar-core
 fi
 
 if ! command -v _build/binary/$BINARY &> /dev/null
 then
+    echo "Building axelar-core..."
     cd _build/axelar-core
     GOBIN="$ROOT/_build/binary" go install -mod=readonly ./...
     cd ../..
@@ -99,17 +102,16 @@ $BINARY gentx owner 70000000${DENOM} \
 $BINARY collect-gentxs \
 --home ${HOME} > /dev/null 2>&1 && echo "Collected genesis transactions"
 
-exit 0
-
 # Read the content of the local file and append it to the file inside the Docker container
-cat ./scripts/bin/libs/evm-rpc.toml >> "$HOME"/config/config.toml
-
-sh ./scripts/steps/setting-all.sh
+cat ./_build/axelar-core/scripts/bin/libs/evm-rpc.toml >> "$HOME"/config/config.toml
 
 # Starting the blockchain node with the specified home directory
-#$BINARY start --home ${HOME} \
-#--minimum-gas-prices 0${DENOM} \
-#--moniker ${MONIKER} \
-#--rpc.laddr "tcp://0.0.0.0:26657"
+touch $HOME/axelar-log.txt
+screen -L -Logfile $HOME/axelar-log.txt -dmS axelar-testnet $BINARY start --home ${HOME} --minimum-gas-prices 0${DENOM} --moniker ${MONIKER}
 
+OWNER_VAL_ADDRESS=$($BINARY keys show owner -a --bech val ${DEFAULT_KEYS_FLAGS})
+$BINARY vald-start --home $HOME --validator-addr $OWNER_VAL_ADDRESS --from gov1  --keyring-backend test
 
+# run new axelar node
+touch $HOME/axelar-vald.txt
+screen -L -Logfile $HOME/axelar-vald.txt -dmS axelar-testnet bash axelar/init-axelar.sh
