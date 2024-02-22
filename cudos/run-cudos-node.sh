@@ -36,7 +36,7 @@ if [ -z "$BINARY" ]; then
     BINARY=build/cudos-noded
 fi
 
-CHAIN_ID="cudos-node"
+CHAIN_ID="cudos"
 KEYRING="test"
 KEY="test0"
 KEY1="test1"
@@ -54,16 +54,22 @@ $BINARY keys add $KEY --keyring-backend $KEYRING --home $HOME_DIR
 $BINARY keys add $KEY1 --keyring-backend $KEYRING --home $HOME_DIR
 $BINARY keys add $KEY2 --keyring-backend $KEYRING --home $HOME_DIR
 
+## Send token to relayer address
+RELAYER_MNEMONIC="alley afraid soup fall idea toss can goose become valve initial strong forward bright dish figure check leopard decide warfare hub unusual join cart"
+
+
+
 # Get the generated addresses
 TEST0_ADDRESS=$($BINARY keys show $KEY -a --keyring-backend $KEYRING --home $HOME_DIR)
 TEST1_ADDRESS=$($BINARY keys show $KEY1 -a --keyring-backend $KEYRING --home $HOME_DIR)
 TEST2_ADDRESS=$($BINARY keys show $KEY2 -a --keyring-backend $KEYRING --home $HOME_DIR)
+RELAYER_ADDRESS=$($BINARY keys add relayer --recover --keyring-backend $KEYRING --home $HOME_DIR <<< $RELAYER_MNEMONIC | grep "address:" | awk '{ print $2 }')
 
 # Allocate genesis accounts (cosmos formatted addresses)
 $BINARY add-genesis-account $TEST0_ADDRESS "500000000000000000000000000${DENOM}" --home $HOME_DIR
 $BINARY add-genesis-account $TEST1_ADDRESS "500000000000000000000000000${DENOM}" --home $HOME_DIR
 $BINARY add-genesis-account $TEST2_ADDRESS "500000000000000000000000000${DENOM}" --home $HOME_DIR 
-
+$BINARY add-genesis-account $RELAYER_ADDRESS "500000000000000000000000000${DENOM}" --home $HOME_DIR
 
 P2PPORT=16656
 RPCPORT=16657
@@ -104,4 +110,4 @@ $BINARY collect-gentxs --home $HOME_DIR
 # Run this to ensure everything worked and that the genesis file is setup correctly
 # This raises an error since Cudos has an additional genesis Tx : MsgSetOrchestratorAddress
 # $BINARY validate-genesis --home $HOME_DIR
-$BINARY start --home $HOME_DIR --grpc.address="0.0.0.0:$GRPCPORT" --grpc-web.address="0.0.0.0:$GRPCWEB"
+screen -dmS cudos-node $BINARY start --home $HOME_DIR --grpc.address="0.0.0.0:$GRPCPORT" --grpc-web.address="0.0.0.0:$GRPCWEB"

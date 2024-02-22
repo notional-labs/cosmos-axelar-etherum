@@ -1,7 +1,7 @@
 {
   "type": "cosmos",
   "value": {
-    "key": "test0",
+    "key": "testkey",
     "chain-id": "cudos",
     "rpc-addr": "http://localhost:16657",
     "grpc-addr": "",

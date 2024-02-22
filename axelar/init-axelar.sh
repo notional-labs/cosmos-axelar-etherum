@@ -71,6 +71,16 @@ $BINARY add-genesis-account governance ${ASSETS} \
 --home ${HOME_DIR} \
 --keyring-backend test > /dev/null 2>&1 && echo "Added 'governance' to genesis account"
 
+
+## fund relayer wallet 
+RELAYER_MNEMONIC="record gift you once hip style during joke field prize dust unique length more pencil transfer quit train device arrive energy sort steak upset"
+
+RELAYER_ADDRESS=$($BINARY keys add relayer --recover --keyring-backend test --home ${HOME_DIR} <<< $RELAYER_MNEMONIC | grep "address:" | awk '{ print $2 }')
+echo "Relayer address: $RELAYER_ADDRESS"
+
+$BINARY add-genesis-account relayer ${ASSETS} --home ${HOME_DIR} --keyring-backend test 
+
+
 $BINARY set-genesis-mint --inflation-min 0 --inflation-max 0 --inflation-max-rate-change 0 --home ${HOME_DIR}
 $BINARY set-genesis-gov --minimum-deposit "100000000${DENOM}" --max-deposit-period 90s --voting-period 90s --home ${HOME_DIR}
 $BINARY set-genesis-reward --external-chain-voting-inflation-rate 0 --home ${HOME_DIR}
@@ -92,9 +102,9 @@ $BINARY gentx owner 70000000${DENOM} \
 --moniker ${MONIKER} \
 --chain-id ${CHAIN_ID} > /dev/null 2>&1 && echo "Generated genesis transaction for 'owner'"
 
+
 # Collecting all genesis transactions to form the genesis block
-$BINARY collect-gentxs \
---home ${HOME_DIR} > /dev/null 2>&1 && echo "Collected genesis transactions"
+$BINARY collect-gentxs --home ${HOME_DIR} > /dev/null 2>&1 && echo "Collected genesis transactions"
 
 # Read the content of the local file and append it to the file inside the Docker container
 cat ./deps/axelar-core/scripts/bin/libs/evm-rpc.toml >> "$HOME_DIR"/config/config.toml
