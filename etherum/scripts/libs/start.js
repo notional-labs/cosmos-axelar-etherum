@@ -23,6 +23,7 @@ async function start(fundAddresses = [], chains = [], options = {}) {
         chainOutputPath: configPath.localEvmChains,
         accountsToFund: fundAddresses,
         callback: (chain, _info) => deployAndFundUsdc(chain, fundAddresses),
+        port: 7545,
         chains: chains.length !== 0 ? chains : null,
         relayers,
         relayInterval: options.relayInterval,

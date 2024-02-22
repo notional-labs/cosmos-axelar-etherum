@@ -16,14 +16,14 @@ run-cudos-node:
 
 setup-axelar: update-gitsubmodule clean-testing-data
 	./axelar/init-axelar.sh
-	./cudos/run-cudos-node.sh $(CUDOS_BINARY) 
-
 
 init-chains:
+	./etherum/init-evm.sh # run etherum testnet, rpc port 7545
+	sleep 5
 	./axelar/init-axelar.sh  # run axelar init script, start at port 26657
+	sleep 5
 	./scripts/cudos/run-cudos-node.sh $(CUDOS_BINARY) # run cudos node at port 16657
 	screen -ls 
-
 
 clean-testing-data:
 	@echo "Killing migallod and removing previous data"
