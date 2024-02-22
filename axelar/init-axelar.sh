@@ -22,6 +22,8 @@ fi
 
 # Removing the existing directory to start with a clean slate
 rm -rf ${HOME_DIR}/*
+screen -S axelar-testnet -X kill
+screen -S axelar-vald -X kill
 
 DEFAULT_KEYS_FLAGS="--keyring-backend test --home ${HOME_DIR}"
 ASSETS="100000000000000000000${DENOM}"

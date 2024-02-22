@@ -14,6 +14,6 @@ mkdir -p $HOME
 
 # run new evm node
 touch $HOME/evm-log.txt
-screen -L -Logfile $HOME/evm-log.txt -dmS evm-testnet npx hardhat node
+screen -L -Logfile $HOME/evm-log.txt -dmS evm-testnet npm run start
 
 cd ..
