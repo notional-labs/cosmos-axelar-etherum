@@ -1,4 +1,4 @@
-CUDOS_BINARY:= _build/cudos-noded
+CUDOS_BINARY:= _build/binary/cudos-noded
 
 .PHONY: update-gitsubmodule run-cudos-node build-cudos-node
 
@@ -6,9 +6,13 @@ update-gitsubmodule:
 	git submodule update --init --recursive
 
 build-cudos-node: update-gitsubmodule
-	rm -rf cudos-node/build
+	rm -rf deps/cudos-node/build
 	mkdir -p _build
-	./scripts/build-cudos-node.sh
+	./cudos/build-cudos-node.sh
 
 run-cudos-node:
-	./scripts/run-cudos-node.sh $(CUDOS_BINARY)
+	./cudos/run-cudos-node.sh $(CUDOS_BINARY)
+
+setup-axelar:
+	update-gitsubmodule
+	./axelar/init-axelar.sh

@@ -11,6 +11,21 @@ Build folder: \_build
 Testnet folder: testnet
 - testnet/axelar-testnet
 - testnet/evm-testnet
+- testnet/cudos-testnet
+
+## Port management
+
+### Cudos
+| Type | Port  |
+| ---- | ----- |
+| RPC  | 16657 |
+| P2P  | 16656 | 
+
+### Axelar
+| Type | Port  |
+| ---- | ----- |
+| RPC  | 26657 |
+| P2P  | 26656 | 
 
 ## Setup etherum environment
 

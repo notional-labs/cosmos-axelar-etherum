@@ -1,6 +1,6 @@
 BINARY=$1
 CONTINUE=${CONTINUE:-"false"}
-HOME_DIR=cudos-data
+HOME_DIR=testnet/cudos-testnet
 ENV=${ENV:-""}
 
 if [ "$CONTINUE" == "true" ]; then
@@ -8,7 +8,7 @@ if [ "$CONTINUE" == "true" ]; then
     exit 0
 fi
 
-rm -rf cudos-data
+rm -rf $HOME_DIR/cudos-data
 pkill cudos-noded
 
 # check DENOM is set. If not, set to acudos
