@@ -14,8 +14,7 @@ build-cudos-node: update-gitsubmodule
 run-cudos-node:
 	./cudos/run-cudos-node.sh $(CUDOS_BINARY)
 
-setup-axelar:
-	update-gitsubmodule
+setup-axelar: update-gitsubmodule
 	./axelar/init-axelar.sh
 	./scripts/cudos/run-cudos-node.sh $(CUDOS_BINARY) 
 
