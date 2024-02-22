@@ -1,3 +1,4 @@
 testnet
 _build
 **/node_modules
+.idea
