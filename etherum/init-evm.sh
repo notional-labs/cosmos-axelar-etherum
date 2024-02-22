@@ -16,4 +16,8 @@ mkdir -p $HOME
 touch $HOME/evm-log.txt
 screen -L -Logfile $HOME/evm-log.txt -dmS evm-testnet npm run start
 
+sleep 5
+
+npm run send-token Etherum cudos 1000
+
 cd ..

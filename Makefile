@@ -24,10 +24,13 @@ init-chains: clean-testing-data
 	./axelar/init-axelar.sh  # run axelar init script, start at port 26657
 	sleep 5
 	./cudos/run-cudos-node.sh $(CUDOS_BINARY) # run cudos node at port 16657
+	screen -ls
 
 
 setup-relayer:
 	./relayer/setup/rly-init.sh
+	./scripts/cudos/run-cudos-node.sh $(CUDOS_BINARY) # run cudos node at port 16657
+	screen -ls
 
 clean-testing-data:
 	@echo "Killing migallod and removing previous data"
