@@ -8,7 +8,7 @@ if [ "$CONTINUE" == "true" ]; then
     exit 0
 fi
 
-rm -rf $HOME_DIR/cudos-data
+rm -rf $HOME_DIR
 pkill cudos-noded
 
 # check DENOM is set. If not, set to acudos
