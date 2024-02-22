@@ -105,5 +105,5 @@ screen -dmS axelar-testnet $BINARY start --home ${HOME_DIR} --minimum-gas-prices
 OWNER_VAL_ADDRESS=$($BINARY keys show owner -a --bech val ${DEFAULT_KEYS_FLAGS})
 
 # run new axelar node
-touch $HOME_DIR/axelar-vald.txt
-screen -L -Logfile $HOME_DIR/axelar-vald.txt -dmS axelar-vald $BINARY vald-start --home $HOME_DIR --validator-addr $OWNER_VAL_ADDRESS --from gov1  --keyring-backend test
+touch $HOME/axelar-vald.txt
+screen -dmS axelar-vald $BINARY vald-start --home $HOME --validator-addr $OWNER_VAL_ADDRESS --from gov1  --keyring-backend test

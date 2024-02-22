@@ -1,0 +1,319 @@
+Cannot exec 'testnet/cudos/logs/chain.log': No such file or directory
+[90m5:29PM[0m [32mINF[0m starting node with ABCI Tendermint in-process [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mmultiAppConn [36mmodule=[0mproxy [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mconnection=[0mquery [36mimpl=[0mlocalClient [36mmodule=[0mabci-client [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mconnection=[0msnapshot [36mimpl=[0mlocalClient [36mmodule=[0mabci-client [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mconnection=[0mmempool [36mimpl=[0mlocalClient [36mmodule=[0mabci-client [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mconnection=[0mconsensus [36mimpl=[0mlocalClient [36mmodule=[0mabci-client [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mEventBus [36mmodule=[0mevents [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mPubSub [36mmodule=[0mpubsub [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mIndexerService [36mmodule=[0mtxindex [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m ABCI Handshake App Info [36mhash=[0m [36mheight=[0m0 [36mmodule=[0mconsensus [36mprotocol-version=[0m0 [36msoftware-version=[0mv1.1.0-62-g2549da7
+[90m5:29PM[0m [32mINF[0m ABCI Replay Blocks [36mappHeight=[0m0 [36mmodule=[0mconsensus [36mstateHeight=[0m0 [36mstoreHeight=[0m0
+[90m5:29PM[0m [32mINF[0m InitChain [36mchainID=[0mcudos-node [36minitialHeight=[0m1 [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m initializing blockchain state from genesis.json [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m1/11 [36mmodule=[0mx/crisis [36mname=[0mbank/nonnegative-outstanding
+[90m5:29PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m2/11 [36mmodule=[0mx/crisis [36mname=[0mbank/total-supply
+[90m5:29PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m3/11 [36mmodule=[0mx/crisis [36mname=[0mdistribution/nonnegative-outstanding
+[90m5:29PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m4/11 [36mmodule=[0mx/crisis [36mname=[0mdistribution/can-withdraw
+[90m5:29PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m5/11 [36mmodule=[0mx/crisis [36mname=[0mdistribution/reference-count
+[90m5:29PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m6/11 [36mmodule=[0mx/crisis [36mname=[0mdistribution/module-account
+[90m5:29PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m7/11 [36mmodule=[0mx/crisis [36mname=[0mstaking/module-accounts
+[90m5:29PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m8/11 [36mmodule=[0mx/crisis [36mname=[0mstaking/nonnegative-power
+[90m5:29PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m9/11 [36mmodule=[0mx/crisis [36mname=[0mstaking/positive-delegation
+[90m5:29PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m10/11 [36mmodule=[0mx/crisis [36mname=[0mstaking/delegator-shares
+[90m5:29PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m11/11 [36mmodule=[0mx/crisis [36mname=[0mgov/module-account
+[90m5:29PM[0m [32mINF[0m asserted all invariants [36mduration=[0m0.285125 [36mheight=[0m0 [36mmodule=[0mx/crisis
+[90m5:29PM[0m [32mINF[0m created new capability [36mmodule=[0mibc [36mname=[0mports/transfer
+[90m5:29PM[0m [32mINF[0m port binded [36mmodule=[0mx/ibc/port [36mport=[0mtransfer
+[90m5:29PM[0m [32mINF[0m claimed capability [36mcapability=[0m1 [36mmodule=[0mtransfer [36mname=[0mports/transfer
+[90m5:29PM[0m [32mINF[0m Completed ABCI Handshake - CometBFT and App are synced [36mappHash=[0m [36mappHeight=[0m0 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m Version info [36mabci=[0m1.0.0 [36mblock=[0m11 [36mcommit_hash=[0m [36mmodule=[0mserver [36mp2p=[0m8 [36mtendermint_version=[0m0.37.1
+[90m5:29PM[0m [32mINF[0m This node is a validator [36maddr=[0mF89CBED182573483994A3B951611D980E7E0FB73 [36mmodule=[0mconsensus [36mpubKey=[0m/LSdmna05UFwS+dOJNxmvs6keWPijegLww8q/vdyP4k=
+[90m5:29PM[0m [32mINF[0m P2P Node ID [36mID=[0m903e316002be8ca36c79c881ea145c1f1ddf0e21 [36mfile=[0mtestnet/cudos/config/node_key.json [36mmodule=[0mp2p
+[90m5:29PM[0m [32mINF[0m Adding persistent peers [36maddrs=[0m[] [36mmodule=[0mp2p
+[90m5:29PM[0m [32mINF[0m Adding unconditional peer ids [36mids=[0m[] [36mmodule=[0mp2p
+[90m5:29PM[0m [32mINF[0m Add our address to book [36maddr=[0m{"id":"903e316002be8ca36c79c881ea145c1f1ddf0e21","ip":"0.0.0.0","port":26656} [36mbook=[0mtestnet/cudos/config/addrbook.json [36mmodule=[0mp2p
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mNode [36mmodule=[0mserver [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m Starting pprof server [36mladdr=[0mlocalhost:6060 [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m serve [36mmodule=[0mrpc-server [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0m"P2P Switch" [36mmodule=[0mp2p [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mStateSync [36mmodule=[0mstatesync [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mPEX [36mmodule=[0mpex [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mbook=[0mtestnet/cudos/config/addrbook.json [36mimpl=[0mAddrBook [36mmodule=[0mp2p [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mReactor [36mmodule=[0mblockchain [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mConsensusReactor [36mmodule=[0mconsensus [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m Reactor  [36mmodule=[0mconsensus [36mwaitSync=[0mfalse
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mConsensusState [36mmodule=[0mconsensus [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m Ensure peers [36mmodule=[0mpex [36mnumDialing=[0m0 [36mnumInPeers=[0m0 [36mnumOutPeers=[0m0 [36mnumToDial=[0m10
+[90m5:29PM[0m [32mINF[0m No addresses to dial. Falling back to seeds [36mmodule=[0mpex
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mbaseWAL [36mmodule=[0mconsensus [36mmsg=[0m{} [36mwal=[0mtestnet/cudos/data/cs.wal/wal
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mGroup [36mmodule=[0mconsensus [36mmsg=[0m{} [36mwal=[0mtestnet/cudos/data/cs.wal/wal
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mTimeoutTicker [36mmodule=[0mconsensus [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m Searching for height [36mheight=[0m1 [36mmax=[0m0 [36mmin=[0m0 [36mmodule=[0mconsensus [36mwal=[0mtestnet/cudos/data/cs.wal/wal
+[90m5:29PM[0m [32mINF[0m Searching for height [36mheight=[0m0 [36mmax=[0m0 [36mmin=[0m0 [36mmodule=[0mconsensus [36mwal=[0mtestnet/cudos/data/cs.wal/wal
+[90m5:29PM[0m [32mINF[0m Found [36mheight=[0m0 [36mindex=[0m0 [36mmodule=[0mconsensus [36mwal=[0mtestnet/cudos/data/cs.wal/wal
+[90m5:29PM[0m [32mINF[0m Catchup by replaying consensus messages [36mheight=[0m1 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m Replay: Done [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m service start [36mimpl=[0mEvidence [36mmodule=[0mevidence [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m Saving AddrBook to file [36mbook=[0mtestnet/cudos/config/addrbook.json [36mmodule=[0mp2p [36msize=[0m0
+[90m5:29PM[0m [32mINF[0m starting API server... [36mmodule=[0mapi-server
+[90m5:29PM[0m [32mINF[0m serve [36mmodule=[0mapi-server [36mmsg=[0m{}
+[90m5:29PM[0m [32mINF[0m Timed out [36mdur=[0m4994.975 [36mheight=[0m1 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:29PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"9D21C3BF3DDACF7BE6AE5275D48E10C966DCA46320B728FD4307CE3BAF5E7553","parts":{"hash":"B3E64092263FA3DFC90C1BD3AA9AB05131DCE13029B3C6C6E32F2D391F724F5A","total":1}},"height":1,"pol_round":-1,"round":0,"signature":"JfjWQkFoslAVlhdEcLsadVZJblZy4cdArcOrAbxAQxlFh148zBvWJptDHD/LESPjB89YDTCXHfsPt9TApIGSCw==","timestamp":"2024-02-22T10:29:10.946992Z"}
+[90m5:29PM[0m [32mINF[0m received complete proposal block [36mhash=[0m9D21C3BF3DDACF7BE6AE5275D48E10C966DCA46320B728FD4307CE3BAF5E7553 [36mheight=[0m1 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m1 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855
+[90m5:29PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729442357885000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:29PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999943270557642115000000acudos [36mminted_so_far=[0m-182955951588166240436000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:29PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m executed block [36mheight=[0m1 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:29PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B32303220323530203135302037203236203138342032382031373220333620363620333420313232203734203430203131362032303120323339203920313933203134352032313820313630203139312039352031353920313233203235352031363920323337203135352033203138385D3A317D [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m committed state [36mapp_hash=[0mCAFA96071AB81CAC2442227A4A2874C9EF09C191DAA0BF5F9F7BFFA9ED9B03BC [36mheight=[0m1 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:29PM[0m [32mINF[0m indexed block exents [36mheight=[0m1 [36mmodule=[0mtxindex
+[90m5:29PM[0m [32mINF[0m Timed out [36mdur=[0m4974.152 [36mheight=[0m2 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:29PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"05603A5A6FEBBCECF017869C81D71CB4B1E54399612F424BDF29B962F3C28FC9","parts":{"hash":"1CA7DCDBB4C329C7F28B17F1198E474DBF45F2AD519ED343D743685D32A250EB","total":1}},"height":2,"pol_round":-1,"round":0,"signature":"24IEhUJY7iDjSaPN0AcoeFSx/X3ucrZQIugxpJmpStmmKsrSj8XgQkO7arx7QIQUMtJIINNS5+4AqXeIb4QZDA==","timestamp":"2024-02-22T10:29:16.031587Z"}
+[90m5:29PM[0m [32mINF[0m received complete proposal block [36mhash=[0m05603A5A6FEBBCECF017869C81D71CB4B1E54399612F424BDF29B962F3C28FC9 [36mheight=[0m2 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m2 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mCAFA96071AB81CAC2442227A4A2874C9EF09C191DAA0BF5F9F7BFFA9ED9B03BC
+[90m5:29PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729441027029000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:29PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999886541116615086000000acudos [36mminted_so_far=[0m-182955894858725213407000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:29PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m executed block [36mheight=[0m2 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:29PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B3620313837203139382031343320323138203539203332203139312031373420313835203234332032312032372032313620323436203134382037322031303720333420343920323438203437203232312033332036382031383320313935203232302031363420313431203137302038365D3A327D [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m committed state [36mapp_hash=[0m06BBC68FDA3B20BFAEB9F3151BD8F694486B2231F82FDD2144B7C3DCA48DAA56 [36mheight=[0m2 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:29PM[0m [32mINF[0m indexed block exents [36mheight=[0m2 [36mmodule=[0mtxindex
+[90m5:29PM[0m [32mINF[0m Timed out [36mdur=[0m4975.067 [36mheight=[0m3 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:29PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"4DE7C338DB4EE6F3A325877E71C99279A8F759821F83731D8960D36D9BE20CAF","parts":{"hash":"4BBDE392CB6990C9F3CF5692C0E5A5419DF8AF5B90E1F8BA1341E6E415AC5198","total":1}},"height":3,"pol_round":-1,"round":0,"signature":"Lq14FnDICDi2VoFsqt2B5QnY4jdpktada+WSbB5MrE1aWmFIoY0XWlLHJDEAbz3jDJ8HvdXeX6cZ2mUk957nBw==","timestamp":"2024-02-22T10:29:21.054332Z"}
+[90m5:29PM[0m [32mINF[0m received complete proposal block [36mhash=[0m4DE7C338DB4EE6F3A325877E71C99279A8F759821F83731D8960D36D9BE20CAF [36mheight=[0m3 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m3 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m06BBC68FDA3B20BFAEB9F3151BD8F694486B2231F82FDD2144B7C3DCA48DAA56
+[90m5:29PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729439696198000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:29PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999829811676918888000000acudos [36mminted_so_far=[0m-182955838129285517209000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:29PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m executed block [36mheight=[0m3 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:29PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B323120313038203631203233372031343520333620373420313920373820393020313931203136332031313320323130203130382032392032313420373920353820393620373620313434203435203234342037302032303520313030203133312038302031323320323033203135345D3A337D [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m committed state [36mapp_hash=[0m156C3DED91244A134E5ABFA371D26C1DD64F3A604C902DF446CD6483507BCB9A [36mheight=[0m3 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:29PM[0m [32mINF[0m indexed block exents [36mheight=[0m3 [36mmodule=[0mtxindex
+[90m5:29PM[0m [32mINF[0m Timed out [36mdur=[0m4970.917 [36mheight=[0m4 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:29PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"56C123B154D190878710C0568AFE7A36CE4F96F4842FAC3BC22660289E04856D","parts":{"hash":"64D754E9A2CC223F0A6A55FF1615B3E15B995E4F434DAE175886A9BC292FD46B","total":1}},"height":4,"pol_round":-1,"round":0,"signature":"bfUWupC64+oaDmzQ3adsW5ee0LcE1XR78sP6BHH2A17Wk5qK9wTAHDo/l7p56HavBc/xbcuNoKfPeZ8RGCN2Aw==","timestamp":"2024-02-22T10:29:26.087691Z"}
+[90m5:29PM[0m [32mINF[0m received complete proposal block [36mhash=[0m56C123B154D190878710C0568AFE7A36CE4F96F4842FAC3BC22660289E04856D [36mheight=[0m4 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m4 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m156C3DED91244A134E5ABFA371D26C1DD64F3A604C902DF446CD6483507BCB9A
+[90m5:29PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729438365342000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:29PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999773082238553546000000acudos [36mminted_so_far=[0m-182955781399847151867000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:29PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m executed block [36mheight=[0m4 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:29PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B3137322038322032323520323133203935203137322034362032343020323230203520313620313232203632203534203134322035302033342032333820313720313037203020313620313334203235352032332031323920313537203530203920313138203234382039355D3A347D [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m committed state [36mapp_hash=[0mAC52E1D55FAC2EF0DC05107A3E368E3222EE116B001086FF17819D320976F85F [36mheight=[0m4 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:29PM[0m [32mINF[0m indexed block exents [36mheight=[0m4 [36mmodule=[0mtxindex
+[90m5:29PM[0m [32mINF[0m Timed out [36mdur=[0m4977.047 [36mheight=[0m5 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:29PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"E2F0B4BCA9894CA0DF09B3ECF07EB1173693FE343EE58BC5AC533AB63ABFA41E","parts":{"hash":"EFBFB8EF38EF9501D59B5BE617D85F870FA3BF94E04A5F89CF21B1FA7BABF715","total":1}},"height":5,"pol_round":-1,"round":0,"signature":"+M0IgRHuEkPzcaWVN2l36rB9Ls401v0yfk5GJg5Spw1VT5rIp7PdT8gq2Xr7VyJvuZuyoF2qEaU8y5S6zRbRBQ==","timestamp":"2024-02-22T10:29:31.113107Z"}
+[90m5:29PM[0m [32mINF[0m received complete proposal block [36mhash=[0mE2F0B4BCA9894CA0DF09B3ECF07EB1173693FE343EE58BC5AC533AB63ABFA41E [36mheight=[0m5 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m5 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mAC52E1D55FAC2EF0DC05107A3E368E3222EE116B001086FF17819D320976F85F
+[90m5:29PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729437034512000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:29PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999716352801519034000000acudos [36mminted_so_far=[0m-182955724670410117355000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:29PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m executed block [36mheight=[0m5 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:29PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B313736203634203136392031313920323337203739203234302031373820333920323131203137342032303320313034203433203132302031323420313339203839203234392033312031353620323133203233382031333420313038203233352039342032323720383720313939203137332035325D3A357D [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m committed state [36mapp_hash=[0mB040A977ED4FF0B227D3AECB682B787C8B59F91F9CD5EE866CEB5EE357C7AD34 [36mheight=[0m5 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:29PM[0m [32mINF[0m indexed block exents [36mheight=[0m5 [36mmodule=[0mtxindex
+[90m5:29PM[0m [32mINF[0m Ensure peers [36mmodule=[0mpex [36mnumDialing=[0m0 [36mnumInPeers=[0m0 [36mnumOutPeers=[0m0 [36mnumToDial=[0m10
+[90m5:29PM[0m [32mINF[0m No addresses to dial. Falling back to seeds [36mmodule=[0mpex
+[90m5:29PM[0m [32mINF[0m Timed out [36mdur=[0m4975.1 [36mheight=[0m6 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:29PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"3F92D9CF0B05706DD227F64886E1526114C4A395B63047DF5471A67408AB8874","parts":{"hash":"E29E8BB65AB41E0EFD0CE760BDF6CADCB62BB82E0B1A689768B5D42C1BD8BA54","total":1}},"height":6,"pol_round":-1,"round":0,"signature":"zG2GFIXbjJ+p47GWRCIffjiHQpCiuQJt8s+GCJYvNILcQpeBvcVj3FAeglns6fE7NTUdIBg246p/peG9zlrCCQ==","timestamp":"2024-02-22T10:29:36.144925Z"}
+[90m5:29PM[0m [32mINF[0m received complete proposal block [36mhash=[0m3F92D9CF0B05706DD227F64886E1526114C4A395B63047DF5471A67408AB8874 [36mheight=[0m6 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m6 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mB040A977ED4FF0B227D3AECB682B787C8B59F91F9CD5EE866CEB5EE357C7AD34
+[90m5:29PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729435703657000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:29PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999659623365815377000000acudos [36mminted_so_far=[0m-182955667940974413698000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:29PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m executed block [36mheight=[0m6 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:29PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B313436203136312031323920313930203231322031313020313537203538203133392036302031383720323533203239203139372031303720373320313537203233352031313520313035203231392039362031333820353720313839203235332032342031313020333820343820313135203133335D3A367D [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m committed state [36mapp_hash=[0m92A181BED46E9D3A8B3CBBFD1DC56B499DEB7369DB608A39BDFD186E26307385 [36mheight=[0m6 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:29PM[0m [32mINF[0m indexed block exents [36mheight=[0m6 [36mmodule=[0mtxindex
+[90m5:29PM[0m [32mINF[0m Timed out [36mdur=[0m4972.07 [36mheight=[0m7 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:29PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"2A9660F7C6D697626254D0B55963AC7933973BBAD01C8D7EFD87B9631728BCF5","parts":{"hash":"8AB08491D1F4109FA1C33E41680AA1542ECD8772AFABCC3BF2B664494726B69B","total":1}},"height":7,"pol_round":-1,"round":0,"signature":"2Lhn4/7LsJ83eOlzaH90rKhClGdQNoyo3ecCCq0kVDHfdZnA1xeVi5sXGLI14T+wot3/3WG70QdoDL4EW6oqCA==","timestamp":"2024-02-22T10:29:41.175984Z"}
+[90m5:29PM[0m [32mINF[0m received complete proposal block [36mhash=[0m2A9660F7C6D697626254D0B55963AC7933973BBAD01C8D7EFD87B9631728BCF5 [36mheight=[0m7 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m7 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m92A181BED46E9D3A8B3CBBFD1DC56B499DEB7369DB608A39BDFD186E26307385
+[90m5:29PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729434372825000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:29PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999602893931442552000000acudos [36mminted_so_far=[0m-182955611211540040873000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:29PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m executed block [36mheight=[0m7 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:29PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B31373920343820313538203134382031343820363320353620313333203138392033312037372032303020333220393220313839203537203239203234382037322033322031343620363520313835203130312034362039203133322031303220313237203138382039332032375D3A377D [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m committed state [36mapp_hash=[0mB3309E94943F3885BD1F4DC8205CBD391DF848209241B9652E0984667FBC5D1B [36mheight=[0m7 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:29PM[0m [32mINF[0m indexed block exents [36mheight=[0m7 [36mmodule=[0mtxindex
+[90m5:29PM[0m [32mINF[0m Timed out [36mdur=[0m4972.119 [36mheight=[0m8 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:29PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"BC9A97FDB4B94867036D760510BE4FA6F9579A4DAE68E7240742363AF25A2517","parts":{"hash":"A802EECA3CA7D84638158F2CE72376C2FD8F9FB183328B777A33E5983AB22867","total":1}},"height":8,"pol_round":-1,"round":0,"signature":"8mzjSOdyA8b5WQxGE9daIEFpIVewTqP2J8wXCIsPcicLhXO+16UyyC/H9SAi/09KMuMj2GoLiBopqnIRg3tCAQ==","timestamp":"2024-02-22T10:29:46.203783Z"}
+[90m5:29PM[0m [32mINF[0m received complete proposal block [36mhash=[0mBC9A97FDB4B94867036D760510BE4FA6F9579A4DAE68E7240742363AF25A2517 [36mheight=[0m8 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m8 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mB3309E94943F3885BD1F4DC8205CBD391DF848209241B9652E0984667FBC5D1B
+[90m5:29PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729433041969000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:29PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999546164498400583000000acudos [36mminted_so_far=[0m-182955554482106998904000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:29PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m executed block [36mheight=[0m8 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:29PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B3232372035312032303620313230203137382038302031363820313134203135203020313635203130203837203632203234342033382031323020323533203537203136203138362031343520313331203137372031312039332031393320393020373520323431203130302033395D3A387D [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m committed state [36mapp_hash=[0mE333CE78B250A8720F00A50A573EF42678FD3910BA9183B10B5DC15A4BF16427 [36mheight=[0m8 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:29PM[0m [32mINF[0m indexed block exents [36mheight=[0m8 [36mmodule=[0mtxindex
+[90m5:29PM[0m [32mINF[0m Timed out [36mdur=[0m4974.003 [36mheight=[0m9 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:29PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"7A3848322CA68A93250D12E12025201EFFF804D29A0C16B1D2CAD31134B1AA14","parts":{"hash":"F02293C2992E2D1A354AD9C58BB657262ED8E08CF41A366FE5420ADCFDE44C9C","total":1}},"height":9,"pol_round":-1,"round":0,"signature":"emF+IB1+HS6fJRKhmT4GZRhPQNgHeI1sBaDiUvBsLfDjGKRHyb2Ji4fc+mvLRmgCypqmES5bTxt0aTt1e3R0DQ==","timestamp":"2024-02-22T10:29:51.230081Z"}
+[90m5:29PM[0m [32mINF[0m received complete proposal block [36mhash=[0m7A3848322CA68A93250D12E12025201EFFF804D29A0C16B1D2CAD31134B1AA14 [36mheight=[0m9 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m9 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mE333CE78B250A8720F00A50A573EF42678FD3910BA9183B10B5DC15A4BF16427
+[90m5:29PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729431711140000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:29PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999489435066689443000000acudos [36mminted_so_far=[0m-182955497752675287764000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:29PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m executed block [36mheight=[0m9 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:29PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B323437203235302031382031363620313031203234352038362032313820323437203235342037332031333620323820312032303020323038203530203233312039342031343720313331203234382031343220393920313533203135322031343620313137203235322031323220372039365D3A397D [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m committed state [36mapp_hash=[0mF7FA12A665F556DAF7FE49881C01C8D032E75E9383F88E6399989275FC7A0760 [36mheight=[0m9 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:29PM[0m [32mINF[0m indexed block exents [36mheight=[0m9 [36mmodule=[0mtxindex
+[90m5:29PM[0m [32mINF[0m Timed out [36mdur=[0m4974.817 [36mheight=[0m10 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:29PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"475C3464715D47E456DCB092D7C972FBA130444B6BA03D840827F720EE36B9E2","parts":{"hash":"0353844862FC9DC2AF5AB8C3AE0BB239DF219263F27AD4ADA8085ACB6D69F4B9","total":1}},"height":10,"pol_round":-1,"round":0,"signature":"u5OK+17hN00KBnqQC0kam+zsFtXJ5G19TUa901oS9y7Sm7McoQWTIaoLK+tHye5lsjzxEK5PF0yzoT8iefOJBw==","timestamp":"2024-02-22T10:29:56.262371Z"}
+[90m5:29PM[0m [32mINF[0m received complete proposal block [36mhash=[0m475C3464715D47E456DCB092D7C972FBA130444B6BA03D840827F720EE36B9E2 [36mheight=[0m10 [36mmodule=[0mconsensus
+[90m5:29PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m10 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mF7FA12A665F556DAF7FE49881C01C8D032E75E9383F88E6399989275FC7A0760
+[90m5:29PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729430380283000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:29PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999432705636309160000000acudos [36mminted_so_far=[0m-182955441023244907481000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:29PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:29PM[0m [32mINF[0m executed block [36mheight=[0m10 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:29PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B32303620313936203233332036372032353520313032203136352031342031303220313836203136203139352039342032343720313838203230312033302037203530203138312031373520362036322031333520313620373620383520343820313333203332203137302037385D3A417D [36mmodule=[0mserver
+[90m5:29PM[0m [32mINF[0m committed state [36mapp_hash=[0mCEC4E943FF66A50E66BA10C35EF7BCC91E0732B5AF063E87104C55308520AA4E [36mheight=[0m10 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:29PM[0m [32mINF[0m indexed block exents [36mheight=[0m10 [36mmodule=[0mtxindex
+[90m5:30PM[0m [32mINF[0m Timed out [36mdur=[0m4952.031 [36mheight=[0m11 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:30PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"AFE2408C49C166649F554C9D79F5D88FA0D98B2B8F794C48A497FD4B34A1D53F","parts":{"hash":"60C0CD03379CFA325A563C125E6E033A57A48D28282030477BE149F624F05700","total":1}},"height":11,"pol_round":-1,"round":0,"signature":"NjWeFLM9DUCKyzPFbEc0K08XlVcX/tkhRItALQMuAIMokoaiOwAos0OWO2M+4q+Cq+G2hH2cS/6SLvJMaL6EAw==","timestamp":"2024-02-22T10:30:01.296004Z"}
+[90m5:30PM[0m [32mINF[0m received complete proposal block [36mhash=[0mAFE2408C49C166649F554C9D79F5D88FA0D98B2B8F794C48A497FD4B34A1D53F [36mheight=[0m11 [36mmodule=[0mconsensus
+[90m5:30PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m11 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mCEC4E943FF66A50E66BA10C35EF7BCC91E0732B5AF063E87104C55308520AA4E
+[90m5:30PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729429049453000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:30PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999375976207259707000000acudos [36mminted_so_far=[0m-182955384293815858028000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:30PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m executed block [36mheight=[0m11 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:30PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B323038203131352032313420393920323132203231382036332031363820313935203739203337203131302031323720313139203131362036342032333020373320313434203231342035352035392037372031343520353720373720393620333620323220313437203233382038365D3A427D [36mmodule=[0mserver
+[90m5:30PM[0m [32mINF[0m committed state [36mapp_hash=[0mD073D663D4DA3FA8C34F256E7F777440E64990D6373B4D91394D60241693EE56 [36mheight=[0m11 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:30PM[0m [32mINF[0m indexed block exents [36mheight=[0m11 [36mmodule=[0mtxindex
+[90m5:30PM[0m [32mINF[0m Ensure peers [36mmodule=[0mpex [36mnumDialing=[0m0 [36mnumInPeers=[0m0 [36mnumOutPeers=[0m0 [36mnumToDial=[0m10
+[90m5:30PM[0m [32mINF[0m No addresses to dial. Falling back to seeds [36mmodule=[0mpex
+[90m5:30PM[0m [32mINF[0m Timed out [36mdur=[0m4972.89 [36mheight=[0m12 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:30PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"BAC636A788B1A4252642A4605811939EDFB19A75E1E0D3C9D3ADD13EE4B2C99F","parts":{"hash":"91AB28839E66C1537979BCFB80292DC72C4F528895F7F6863694B44E07C4FB6C","total":1}},"height":12,"pol_round":-1,"round":0,"signature":"GW8lWyG0gh5Piby/G5N3Qw6ahfXA9k5lHK/zMcA8Zbh65OMvftbKSl3xRfL/0OLtgWH3b+ks/uCGJvv+U8JfCA==","timestamp":"2024-02-22T10:30:06.328669Z"}
+[90m5:30PM[0m [32mINF[0m received complete proposal block [36mhash=[0mBAC636A788B1A4252642A4605811939EDFB19A75E1E0D3C9D3ADD13EE4B2C99F [36mheight=[0m12 [36mmodule=[0mconsensus
+[90m5:30PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m12 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mD073D663D4DA3FA8C34F256E7F777440E64990D6373B4D91394D60241693EE56
+[90m5:30PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729427718597000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:30PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999319246779541110000000acudos [36mminted_so_far=[0m-182955327564388139431000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:30PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m executed block [36mheight=[0m12 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:30PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B31313820383420323134203137312032303420313636203439203130362032353020373920313835203231392034362039342032353120323234203231372032353220323031203235352033312032343020323133203231352031333320323130203136392036362031343820313220323334203233345D3A437D [36mmodule=[0mserver
+[90m5:30PM[0m [32mINF[0m committed state [36mapp_hash=[0m7654D6ABCCA6316AFA4FB9DB2E5EFBE0D9FCC9FF1FF0D5D785D2A942940CEAEA [36mheight=[0m12 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:30PM[0m [32mINF[0m indexed block exents [36mheight=[0m12 [36mmodule=[0mtxindex
+[90m5:30PM[0m [32mINF[0m Timed out [36mdur=[0m4971.93 [36mheight=[0m13 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:30PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"C0890D03FE49AF3691CEDAA62A5BD008BCF6BEFBE497A1269325D0BC72C1F87B","parts":{"hash":"FEF8BF555772A9DBA4378FC1B836012FA74818255D5D6F72DAA416ED5C0E2759","total":1}},"height":13,"pol_round":-1,"round":0,"signature":"QM3JUEWmSpohrZY9aruitvlKsC91kz39j+GxznkHg6upqVlzEvWesc8zjBOeNPQ2D5osWENoNZ0fcpPdeG/5Bw==","timestamp":"2024-02-22T10:30:11.357403Z"}
+[90m5:30PM[0m [32mINF[0m received complete proposal block [36mhash=[0mC0890D03FE49AF3691CEDAA62A5BD008BCF6BEFBE497A1269325D0BC72C1F87B [36mheight=[0m13 [36mmodule=[0mconsensus
+[90m5:30PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m13 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m7654D6ABCCA6316AFA4FB9DB2E5EFBE0D9FCC9FF1FF0D5D785D2A942940CEAEA
+[90m5:30PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729426387767000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:30PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999262517353153343000000acudos [36mminted_so_far=[0m-182955270834961751664000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:30PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m executed block [36mheight=[0m13 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:30PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B313138203134392031303920313035203135312031323020313239203133362032353020313634203920313236203630203133203231322032353020323338203432203135302032313520313237203632203531203131382035352035352032333220313938203130372031383520313339203135355D3A447D [36mmodule=[0mserver
+[90m5:30PM[0m [32mINF[0m committed state [36mapp_hash=[0m76956D6997788188FAA4097E3C0DD4FAEE2A96D77F3E33763737E8C66BB98B9B [36mheight=[0m13 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:30PM[0m [32mINF[0m indexed block exents [36mheight=[0m13 [36mmodule=[0mtxindex
+[90m5:30PM[0m [32mINF[0m Timed out [36mdur=[0m4970.092 [36mheight=[0m14 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:30PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"F85DCEDCB32EA64E803D5B7677A28EE08517C586E2A0AA48EF70F64179795D86","parts":{"hash":"D1DCA058B317EED56BF69A407F400506A9E4B4A1385F2F9AC51FCE2261912C00","total":1}},"height":14,"pol_round":-1,"round":0,"signature":"/0mwI5cFASukHPBvz+0VPJrqwWF7qi3xKdeUIpKU/U2eXgQ26tlowyRkiFvO2kYQFgx34A/+kLeOCbJc6538Ag==","timestamp":"2024-02-22T10:30:16.384848Z"}
+[90m5:30PM[0m [32mINF[0m received complete proposal block [36mhash=[0mF85DCEDCB32EA64E803D5B7677A28EE08517C586E2A0AA48EF70F64179795D86 [36mheight=[0m14 [36mmodule=[0mconsensus
+[90m5:30PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m14 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m76956D6997788188FAA4097E3C0DD4FAEE2A96D77F3E33763737E8C66BB98B9B
+[90m5:30PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729425056938000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:30PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999205787928096405000000acudos [36mminted_so_far=[0m-182955214105536694726000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:30PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m executed block [36mheight=[0m14 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:30PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B323036203134352039332038332031353120323433203330203234342031323820313835203632203231342032303420313635203932203134322031333920313120313837203933203139352032323920313239203139372032333120313331203136203133312032323420383120313834203137335D3A457D [36mmodule=[0mserver
+[90m5:30PM[0m [32mINF[0m committed state [36mapp_hash=[0mCE915D5397F31EF480B93ED6CCA55C8E8B0BBB5DC3E581C5E7831083E051B8AD [36mheight=[0m14 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:30PM[0m [32mINF[0m indexed block exents [36mheight=[0m14 [36mmodule=[0mtxindex
+[90m5:30PM[0m [32mINF[0m Timed out [36mdur=[0m4972.057 [36mheight=[0m15 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:30PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"4791874B0F25AC1FFC43C439E47F4CE46E8797B6F8F2584208739E83CDD71F07","parts":{"hash":"AA7D3CBD030A40FB424162E6E23F569CFF438728C6D4927FBB4FB1D6900DC948","total":1}},"height":15,"pol_round":-1,"round":0,"signature":"tatbDaG0yUx1Oqc7e/rkGNj1Mwux4XaJ5u+7xvcEN8rV+/ZEm5ss/SLjbfLnhbFtSUhP9aTxkIYjimVPYNveDg==","timestamp":"2024-02-22T10:30:21.420084Z"}
+[90m5:30PM[0m [32mINF[0m received complete proposal block [36mhash=[0m4791874B0F25AC1FFC43C439E47F4CE46E8797B6F8F2584208739E83CDD71F07 [36mheight=[0m15 [36mmodule=[0mconsensus
+[90m5:30PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m15 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mCE915D5397F31EF480B93ED6CCA55C8E8B0BBB5DC3E581C5E7831083E051B8AD
+[90m5:30PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729423726054000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:30PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999149058504370351000000acudos [36mminted_so_far=[0m-182955157376112968672000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:30PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m executed block [36mheight=[0m15 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:30PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B39332031313320313537203137372031353820353220383820323439203431203136392036302032302031323520333320393220323433203233312032342034392039372031333920323230203231352031323520333320353520313631203231342032343620313033203334203131375D3A467D [36mmodule=[0mserver
+[90m5:30PM[0m [32mINF[0m committed state [36mapp_hash=[0m5D719DB19E3458F929A93C147D215CF3E71831618BDCD77D2137A1D6F6672275 [36mheight=[0m15 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:30PM[0m [32mINF[0m indexed block exents [36mheight=[0m15 [36mmodule=[0mtxindex
+[90m5:30PM[0m [32mINF[0m Timed out [36mdur=[0m4969.987 [36mheight=[0m16 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:30PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"772E7106667590F60DD5F631158DA7007478CFC69C878893ED298BC6083544CC","parts":{"hash":"82DE2416A5A8526D84FB7897615FC3E18FDB9579B501AC180850D533337217A3","total":1}},"height":16,"pol_round":-1,"round":0,"signature":"oWmlLtpL9AaDgzrAZUxnUtHu/YrX+PyytoVUgwPdukuqG+lO3Z6UjA54yROmdxGgzpKlJrgP+ZtMS8KK/EjbDw==","timestamp":"2024-02-22T10:30:26.458627Z"}
+[90m5:30PM[0m [32mINF[0m received complete proposal block [36mhash=[0m772E7106667590F60DD5F631158DA7007478CFC69C878893ED298BC6083544CC [36mheight=[0m16 [36mmodule=[0mconsensus
+[90m5:30PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m16 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m5D719DB19E3458F929A93C147D215CF3E71831618BDCD77D2137A1D6F6672275
+[90m5:30PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729422395251000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:30PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999092329081975100000000acudos [36mminted_so_far=[0m-182955100646690573421000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:30PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m executed block [36mheight=[0m16 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:30PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B37332031353820313135203831203138203135203231312032303220313120322034203220363120313839203833203135312031333920323038203234362032323620313433203339203138342031323020323820393020313634203835203130302038332034382032325D3A31307D [36mmodule=[0mserver
+[90m5:30PM[0m [32mINF[0m committed state [36mapp_hash=[0m499E7351120FD3CA0B0204023DBD53978BD0F6E28F27B8781C5AA45564533016 [36mheight=[0m16 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:30PM[0m [32mINF[0m indexed block exents [36mheight=[0m16 [36mmodule=[0mtxindex
+[90m5:30PM[0m [32mINF[0m Timed out [36mdur=[0m4971.961 [36mheight=[0m17 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:30PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"4DEA46438CBE20913776746A1DD4D5F157F8FF175D2598F7FB7B232DD2D6DA53","parts":{"hash":"6AA66239B5892B703DC6D2179B4C70B5F46962FE8614404565BCC281A352A4D3","total":1}},"height":17,"pol_round":-1,"round":0,"signature":"7N+hZWueHGrI3BIPoUT3e5dwvXV+1yTZecea4DDK4SUo74z3RriazvS2BW442cUkKRdzH2NRjoZh+DCwLVNqCA==","timestamp":"2024-02-22T10:30:31.499271Z"}
+[90m5:30PM[0m [32mINF[0m received complete proposal block [36mhash=[0m4DEA46438CBE20913776746A1DD4D5F157F8FF175D2598F7FB7B232DD2D6DA53 [36mheight=[0m17 [36mmodule=[0mconsensus
+[90m5:30PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m17 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m499E7351120FD3CA0B0204023DBD53978BD0F6E28F27B8781C5AA45564533016
+[90m5:30PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729421064396000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:30PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529999035599660910704000000acudos [36mminted_so_far=[0m-182955043917269509025000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:30PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m executed block [36mheight=[0m17 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:30PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B3639203335203138203535203233342031322031203137362032323520323334203233342031303520383720313820353520313838203231312031323020353920313233203735203235322031303620393620333320343220323031203136392031383020323133203939203136385D3A31317D [36mmodule=[0mserver
+[90m5:30PM[0m [32mINF[0m committed state [36mapp_hash=[0m45231237EA0C01B0E1EAEA69571237BCD3783B7B4BFC6A60212AC9A9B4D563A8 [36mheight=[0m17 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:30PM[0m [32mINF[0m indexed block exents [36mheight=[0m17 [36mmodule=[0mtxindex
+[90m5:30PM[0m [32mINF[0m Ensure peers [36mmodule=[0mpex [36mnumDialing=[0m0 [36mnumInPeers=[0m0 [36mnumOutPeers=[0m0 [36mnumToDial=[0m10
+[90m5:30PM[0m [32mINF[0m No addresses to dial. Falling back to seeds [36mmodule=[0mpex
+[90m5:30PM[0m [32mINF[0m Timed out [36mdur=[0m4971.147 [36mheight=[0m18 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:30PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"F85E6C58CA14524CDDA9AF735FB6B80BA244FBB8F580BD8D34F7BFCC6BBB5A7D","parts":{"hash":"0D37469ACFB7412BE40CC0E0589FCC4C2186323DE4C912A75D0ED4ACA3F99451","total":1}},"height":18,"pol_round":-1,"round":0,"signature":"jh3zYxD2YtPgSR5mYaqK7pp5LUPfTAVyNSJQH1ZFcyg14pa7KzpHWKXL4sKUdnjM1a6P0IGiwTaVbJBWoVNrBw==","timestamp":"2024-02-22T10:30:36.533962Z"}
+[90m5:30PM[0m [32mINF[0m received complete proposal block [36mhash=[0mF85E6C58CA14524CDDA9AF735FB6B80BA244FBB8F580BD8D34F7BFCC6BBB5A7D [36mheight=[0m18 [36mmodule=[0mconsensus
+[90m5:30PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m18 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m45231237EA0C01B0E1EAEA69571237BCD3783B7B4BFC6A60212AC9A9B4D563A8
+[90m5:30PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729419733538000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:30PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529998978870241177166000000acudos [36mminted_so_far=[0m-182954987187849775487000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:30PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m executed block [36mheight=[0m18 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:30PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B36352032353320353520313220313037203231312031303520323332203137203131322038382037302031303120313130203136302031372039312038322039342031313420323120323338203334203138312033362035312031342032333420313631203336203135312037385D3A31327D [36mmodule=[0mserver
+[90m5:30PM[0m [32mINF[0m committed state [36mapp_hash=[0m41FD370C6BD369E811705846656EA0115B525E7215EE22B524330EEAA124974E [36mheight=[0m18 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:30PM[0m [32mINF[0m indexed block exents [36mheight=[0m18 [36mmodule=[0mtxindex
+[90m5:30PM[0m [32mINF[0m Timed out [36mdur=[0m4970.054 [36mheight=[0m19 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:30PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"CCE931B2A281835629F4C861DAB0496A321DEA17C4B22F7EBDEEAC27EEE25443","parts":{"hash":"126B0F74FB395568A881BB94B85F30FB040FA0D9246425C3F1EF66430FAC32BB","total":1}},"height":19,"pol_round":-1,"round":0,"signature":"31IfU4tiBEfsMbAqxLkBbQFMXAJrJnHAljSPa5BZGmmh2/ysPcZgnUcFta5WZVtZC6L3x9IFGvaw7g1Rcc2TDA==","timestamp":"2024-02-22T10:30:41.566715Z"}
+[90m5:30PM[0m [32mINF[0m received complete proposal block [36mhash=[0mCCE931B2A281835629F4C861DAB0496A321DEA17C4B22F7EBDEEAC27EEE25443 [36mheight=[0m19 [36mmodule=[0mconsensus
+[90m5:30PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m19 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m41FD370C6BD369E811705846656EA0115B525E7215EE22B524330EEAA124974E
+[90m5:30PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729418402708000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:30PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529998922140822774458000000acudos [36mminted_so_far=[0m-182954930458431372779000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:30PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m executed block [36mheight=[0m19 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:30PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B31343820313120343520313420323533203420323439203235302032353320363620313232203234322032353020313332203231302032303120323137203136352031323820313336203133382033392034342031333120393020313535203139372039342031333720343020313532203130375D3A31337D [36mmodule=[0mserver
+[90m5:30PM[0m [32mINF[0m committed state [36mapp_hash=[0m940B2D0EFD04F9FAFD427AF2FA84D2C9D9A580888A272C835A9BC55E8928986B [36mheight=[0m19 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:30PM[0m [32mINF[0m indexed block exents [36mheight=[0m19 [36mmodule=[0mtxindex
+[90m5:30PM[0m [32mINF[0m Timed out [36mdur=[0m4972.017 [36mheight=[0m20 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:30PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"7BC5A2F2C84AFDA8DFAACC6B9DE6C5AE745CB8B1183FB1A7CF63714A7A080013","parts":{"hash":"BFB63546E5F412243D2ADA2C2FD2F907ECC8E37941790CEAC9FFAE73395AFE66","total":1}},"height":20,"pol_round":-1,"round":0,"signature":"FbKV645exh7SQWC20THVBRswrz0GOmq1hGy8ZnF3jiFA7Ly0tA/+OeDtDM/FsA3p89S5Nz7rs1z0BYPLS1ASCA==","timestamp":"2024-02-22T10:30:46.594674Z"}
+[90m5:30PM[0m [32mINF[0m received complete proposal block [36mhash=[0m7BC5A2F2C84AFDA8DFAACC6B9DE6C5AE745CB8B1183FB1A7CF63714A7A080013 [36mheight=[0m20 [36mmodule=[0mconsensus
+[90m5:30PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m20 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m940B2D0EFD04F9FAFD427AF2FA84D2C9D9A580888A272C835A9BC55E8928986B
+[90m5:30PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729417071853000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:30PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529998865411405702605000000acudos [36mminted_so_far=[0m-182954873729014300926000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:30PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m executed block [36mheight=[0m20 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:30PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B31383020313135203233352031372031353120323339203632203738203237203231342039392031313620313237203137362038322033312034302031363520323438203235332035203235342031363420323130203232332031313920323438203738203420343020323030203231385D3A31347D [36mmodule=[0mserver
+[90m5:30PM[0m [32mINF[0m committed state [36mapp_hash=[0mB473EB1197EF3E4E1BD663747FB0521F28A5F8FD05FEA4D2DF77F84E0428C8DA [36mheight=[0m20 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:30PM[0m [32mINF[0m indexed block exents [36mheight=[0m20 [36mmodule=[0mtxindex
+[90m5:30PM[0m [32mINF[0m Timed out [36mdur=[0m4970.051 [36mheight=[0m21 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:30PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"2C91CF2166FDCF5BCC9B50328317462E163594E6CB11591F01441E210BDF4C47","parts":{"hash":"69D7E5741184C447C3BC5A121ED5969BD70FD95532927DE4FCCFDB604E3B93A9","total":1}},"height":21,"pol_round":-1,"round":0,"signature":"1SHHkwGimrn12O24Ep4c2ty/fqoh7QSUy9HHBxnem6cC/yDpmrNhGs9MaId5zTpSx8i6DaJuw7YsJcfpeuMlDA==","timestamp":"2024-02-22T10:30:51.626553Z"}
+[90m5:30PM[0m [32mINF[0m received complete proposal block [36mhash=[0m2C91CF2166FDCF5BCC9B50328317462E163594E6CB11591F01441E210BDF4C47 [36mheight=[0m21 [36mmodule=[0mconsensus
+[90m5:30PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m21 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mB473EB1197EF3E4E1BD663747FB0521F28A5F8FD05FEA4D2DF77F84E0428C8DA
+[90m5:30PM[0m [32mINF[0m minted coins from module account [36mamount=[0m56729415741023000000acudos [36mfrom=[0mcudoMint [36mmodule=[0mx/bank
+[90m5:30PM[0m [32mINF[0m CudosMint module [36mleft=[0m1529998808681989961582000000acudos [36mminted_so_far=[0m-182954816999598559903000000acudos [36mmodule=[0mx/cudoMint [36mtotal=[0m1347043991682391401679000000acudos
+[90m5:30PM[0m [32mINF[0m Balance [36macudos=[0m0 [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m Next automatic batch will be created at height 120 [36maction=[0m"auto creation of batches" [36mmodule=[0mx/gravity
+[90m5:30PM[0m [32mINF[0m executed block [36mheight=[0m21 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:30PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B393320323033203139382036342032333320323920323431203135203232352031323320383720313537203130392037392031373220323039203232362031303920313020313736203133322035352031313120393120313120313938203130362035392031393920343520313835203233375D3A31357D [36mmodule=[0mserver
+[90m5:30PM[0m [32mINF[0m committed state [36mapp_hash=[0m5DCBC640E91DF10FE17B579D6D4FACD1E26D0AB084376F5B0BC66A3BC72DB9ED [36mheight=[0m21 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:30PM[0m [32mINF[0m indexed block exents [36mheight=[0m21 [36mmodule=[0mtxindex
