@@ -6,7 +6,6 @@ CHAIN_ID=axelar
 MONIKER=axelar
 HOME=testnet/axelar-testnet
 BINARY=${BINARY:-"_build/binary/axelard"}
-VALD_BINARY=${VALD_BINARY:-"_build/binary/vald"}
 
 # underscore so that go tool will not take gocache into account
 mkdir -p _build/gocache
@@ -110,8 +109,7 @@ touch $HOME/axelar-log.txt
 screen -dmS axelar-testnet $BINARY start --home ${HOME} --minimum-gas-prices 0${DENOM} --moniker ${MONIKER}
 
 OWNER_VAL_ADDRESS=$($BINARY keys show owner -a --bech val ${DEFAULT_KEYS_FLAGS})
-$BINARY vald-start --home $HOME --validator-addr $OWNER_VAL_ADDRESS --from gov1  --keyring-backend test
 
 # run new axelar node
 touch $HOME/axelar-vald.txt
-screen -dmS axelar-testnet bash axelar/init-axelar.sh
+screen -L -Logfile $HOME/axelar-vald.txt -dmS axelar-vald $BINARY vald-start --home $HOME --validator-addr $OWNER_VAL_ADDRESS --from gov1  --keyring-backend test

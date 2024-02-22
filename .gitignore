@@ -1,3 +1,7 @@
 testnet
 _build
+<<<<<<< HEAD
 cudos-data
+=======
+**/node_modules
+>>>>>>> 9231c54 (add etherum node)
