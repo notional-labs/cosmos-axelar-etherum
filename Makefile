@@ -11,18 +11,19 @@ build-cudos-node: update-gitsubmodule
 	mkdir -p _build
 	./cudos/build-cudos-node.sh
 
-run-cudos-node:
+run-cudos-node: update-gitsubmodule 
 	./cudos/run-cudos-node.sh $(CUDOS_BINARY)
 
-setup-axelar: update-gitsubmodule clean-testing-data
+run-axelar-node: update-gitsubmodule
 	./axelar/init-axelar.sh
 
-init-chains:
-	./etherum/init-evm.sh # run etherum testnet, rpc port 7545
-	sleep 5
+
+init-chains: clean-testing-data
+	# ./etherum/init-evm.sh # run etherum testnet, rpc port 7545
+	# sleep 5
 	./axelar/init-axelar.sh  # run axelar init script, start at port 26657
 	sleep 5
-	./scripts/cudos/run-cudos-node.sh $(CUDOS_BINARY) # run cudos node at port 16657
+	./cudos/run-cudos-node.sh $(CUDOS_BINARY) # run cudos node at port 16657
 	screen -ls 
 
 clean-testing-data:

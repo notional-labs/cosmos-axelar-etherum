@@ -111,7 +111,7 @@ cat ./deps/axelar-core/scripts/bin/libs/evm-rpc.toml >> "$HOME_DIR"/config/confi
 
 # Starting the blockchain node with the specified home directory
 touch $HOME_DIR/axelar-log.txt
-screen -L -Logfile $HOME_DIR/axelar-log.txt -dmS axelar-testnet $BINARY start --home ${HOME_DIR} --minimum-gas-prices 0${DENOM} --moniker ${MONIKER}
+screen -dmS axelar-testnet $BINARY start --home ${HOME_DIR} --minimum-gas-prices 0${DENOM} --moniker ${MONIKER}
 echo "Started axelar node"
 
 sleep 5
@@ -119,5 +119,5 @@ sleep 5
 OWNER_VAL_ADDRESS=$($BINARY keys show owner -a --bech val ${DEFAULT_KEYS_FLAGS})
 # run new axelar node
 touch $HOME/axelar-vald.txt
-screen -L -Logfile $HOME_DIR/axelar-vald.txt -dmS axelar-vald $BINARY vald-start --home ${HOME_DIR} --validator-addr $OWNER_VAL_ADDRESS --from gov1  --keyring-backend test
+screen -dmS axelar-vald $BINARY vald-start --home ${HOME_DIR} --validator-addr $OWNER_VAL_ADDRESS --from gov1  --keyring-backend test
 echo "Started axelar vald"
