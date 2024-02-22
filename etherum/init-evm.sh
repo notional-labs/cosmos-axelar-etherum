@@ -14,10 +14,11 @@ mkdir -p $HOME
 
 # run new evm node
 touch $HOME/evm-log.txt
-screen -L -Logfile $HOME/evm-log.txt -dmS evm-testnet npm run start
+screen -L -dmS evm-testnet sh -c 'npm run start > $HOME/evm-log.txt 2>&1'
 
 sleep 5
 
-npm run send-token Etherum cudos 1000
+npm run send-token Ethereum cudos 1000 > $HOME/evm-log.txt 2>&1
 
 cd ..
+
