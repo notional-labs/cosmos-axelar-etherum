@@ -11,4 +11,4 @@ build-cudos-node: update-gitsubmodule
 	./scripts/build-cudos-node.sh
 
 run-cudos-node:
-	./scripts/run-cudos-node.sh $(CUDOS_BINARY) 
+	./scripts/run-cudos-node.sh $(CUDOS_BINARY)

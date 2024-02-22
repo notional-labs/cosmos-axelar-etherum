@@ -12,16 +12,12 @@ mkdir -p _build/gocache
 export GOMODCACHE=$ROOT/_build/gocache
 
 # download and install $BINARY binary
-# check if _build/axelar-core folder exists
-if [ ! -d "_build/axelar-core" ]; then
-    echo "Cloning axelar-core repo..."
-    git clone -b 0.34.1-cudos-demo https://github.com/notional-labs/axelar-core.git _build/axelar-core
-fi
+make update-gitsubmodule
 
 if ! command -v _build/binary/$BINARY &> /dev/null
 then
     echo "Building axelar-core..."
-    cd _build/axelar-core
+    cd deps/axelar-core
     GOBIN="$ROOT/_build/binary" go install -mod=readonly ./...
     cd ../..
 fi
@@ -102,7 +98,7 @@ $BINARY collect-gentxs \
 --home ${HOME} > /dev/null 2>&1 && echo "Collected genesis transactions"
 
 # Read the content of the local file and append it to the file inside the Docker container
-cat ./_build/axelar-core/scripts/bin/libs/evm-rpc.toml >> "$HOME"/config/config.toml
+cat ./deps/axelar-core/scripts/bin/libs/evm-rpc.toml >> "$HOME"/config/config.toml
 
 # Starting the blockchain node with the specified home directory
 touch $HOME/axelar-log.txt
