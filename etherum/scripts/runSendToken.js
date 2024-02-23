@@ -6,7 +6,7 @@ const {
     getEVMChains,
 } = require('./libs');
 
-const args = process.argv.slice(2);
+const args = process.argv.slice(2,6);
 
 // Get the example object.
 const {execute} = require("./libs/sendToken");

@@ -74,7 +74,7 @@ RELAYER_ADDRESS=$($BINARY keys add relayer --recover --keyring-backend $KEYRING 
 # Allocate genesis accounts (cosmos formatted addresses)
 $BINARY add-genesis-account $TEST0_ADDRESS "500000000000000000000000000${DENOM}" --home $HOME_DIR
 $BINARY add-genesis-account $TEST1_ADDRESS "500000000000000000000000000${DENOM}" --home $HOME_DIR
-$BINARY add-genesis-account $TEST2_ADDRESS "500000000000000000000000000${DENOM}" --home $HOME_DIR 
+$BINARY add-genesis-account $TEST2_ADDRESS "500000000000000000000000000${DENOM}" --home $HOME_DIR
 $BINARY add-genesis-account $RELAYER_ADDRESS "500000000000000000000000000${DENOM}" --home $HOME_DIR
 
 P2PPORT=16656
@@ -105,7 +105,7 @@ $SED_BINARY -i '0,/enable = false/s//enable = true/' $HOME_DIR/config/app.toml
 $SED_BINARY -i 's/swagger = false/swagger = true/' $HOME_DIR/config/app.toml
 $SED_BINARY -i 's/minimum-gas-prices = ""/minimum-gas-prices = "0acudos"/' $HOME_DIR/config/app.toml
 
-# Sign genesis transaction  
+# Sign genesis transaction
 # TEST0 is the validator
 $BINARY gentx $KEY "500000000000000000000000${DENOM}" "0x4838B106FCe9647Bdf1E7877BF73cE8B0BAD5f97" $TEST0_ADDRESS --commission-rate=$COMMISSION_RATE --min-self-delegation=$MIN_SELF_DELEGATION --commission-max-rate=$COMMISSION_MAX_RATE --keyring-backend $KEYRING --chain-id $CHAIN_ID --home $HOME_DIR
 
