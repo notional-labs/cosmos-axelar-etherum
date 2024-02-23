@@ -16,4 +16,3 @@ $BINARY tx evm confirm-gateway-txs ${CHAIN} ${TXS} --generate-only \
 cat ${NODE_HOME}/unsigned_msg.json
 
 sh ./axelar/bin/libs/broadcast-unsigned-multi-tx.sh
-

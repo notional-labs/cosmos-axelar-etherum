@@ -30,7 +30,7 @@ screen -L -dmS evm-testnet sh -c 'npm run start > $HOME/evm-log.txt 2>&1'
 
 sleep 5
 
-npm run send-token Ethereum cudos 1000 > $HOME/evm-log.txt 2>&1
+npm run send-token Ethereum cudos cudos1mjk79fjjgpplak5wq838w0yd982gzkyfz8xprw 1000 > $HOME/evm-log.txt 2>&1
 
 cd ..
 
