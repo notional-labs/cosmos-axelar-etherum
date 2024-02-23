@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 ROOT=$(pwd)
 cd deps/cudos-node

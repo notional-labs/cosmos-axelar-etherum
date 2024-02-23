@@ -24,7 +24,7 @@ run-axelar-node: update-gitsubmodule
 	sleep 5
 	./axelar/setup.sh # setup chain related
 
-init-chains: clean-testing-data
+init-chains: clean-up
 	$(MAKE) run-cudos-node # run cudos node at port 16657
 	sleep 5
 	./etherum/init-evm.sh # run etherum testnet, rpc port 7545
@@ -37,9 +37,11 @@ setup-relayer:
 run-ibc-send:
 	./axelar/route-ibc-pending.sh
 
-clean-testing-data:
-	@echo "Killing migallod and removing previous data"
-	-@pkill $(CUDOS_BINARY) 2>/dev/null
-	-@pkill $(AXELAR_BINARY) 2>/dev/null
-	-@pkill rly 2>/dev/null
-	-@rm -rf ./testnet
+clean-up:
+	@echo "Killing binaries and removing previous data"
+	-@pkill $(CUDOS_BINARY) || true
+	-@pkill $(AXELAR_BINARY) || true
+	-@pkill rly || true
+	-@kill -9 $(lsof -i :7545 | awk 'NR>1 {print $2}') || true
+	-@rm -rf ./testnet || true
+	-@screen -wipe

@@ -7,7 +7,8 @@ echo "##################"
 echo ""
 
 # Configure predefined mnemonic pharses
-BINARY=rly
+ROOT=$(pwd)
+BINARY=_build/binary/relayer
 CHAIN_DIR=$(pwd)/testnet
 CHAINID_1=cudos
 CHAINID_2=axelar
@@ -16,11 +17,12 @@ MNEMONIC_1="alley afraid soup fall idea toss can goose become valve initial stro
 MNEMONIC_2="record gift you once hip style during joke field prize dust unique length more pencil transfer quit train device arrive energy sort steak upset"
 RELAY_PATH=cudos-axelar
 
-# Ensure rly is installed
+# check if relayer not installed
 if ! [ -x "$(command -v $BINARY)" ]; then
-    echo "$BINARY is required to run this script..."
-    echo "You can download at https://github.com/cosmos/relayer"
-    exit 1
+    echo "installing $BINARY ..."
+    cd deps/relayer
+    GOBIN="$ROOT/_build/binary" go install -mod=readonly ./...
+    cd ../..
 fi
 
 echo "Initializing $BINARY..."
@@ -41,7 +43,8 @@ echo "Creating a channel..."
 $BINARY tx channel $RELAY_PATH --home $CHAIN_DIR/$RELAYER_DIR
 
 echo "Starting to listen relayer..."
-$BINARY start $RELAY_PATH -p events -b 100 --home $CHAIN_DIR/$RELAYER_DIR > $CHAIN_DIR/relayer.log 2>&1 &
+touch $CHAIN_DIR/$RELAYER_DIR/relayer-log.txt
+screen -L -Logfile $CHAIN_DIR/$RELAYER_DIR/relayer-log.txt -dmS relayer $BINARY start $RELAY_PATH -p events -b 100 --home $CHAIN_DIR/$RELAYER_DIR
 
 echo ""
 echo "############################"

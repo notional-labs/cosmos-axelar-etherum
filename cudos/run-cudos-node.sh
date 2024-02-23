@@ -1,3 +1,11 @@
+#!/usr/bin/env bash
+
+echo ""
+echo "##################"
+echo "#  Setup Cudos   #"
+echo "##################"
+echo ""
+
 BINARY=$1
 CONTINUE=${CONTINUE:-"false"}
 HOME_DIR=testnet/cudos-testnet
@@ -57,8 +65,6 @@ $BINARY keys add $KEY2 --keyring-backend $KEYRING --home $HOME_DIR
 ## Send token to relayer address
 RELAYER_MNEMONIC="alley afraid soup fall idea toss can goose become valve initial strong forward bright dish figure check leopard decide warfare hub unusual join cart"
 
-
-
 # Get the generated addresses
 TEST0_ADDRESS=$($BINARY keys show $KEY -a --keyring-backend $KEYRING --home $HOME_DIR)
 TEST1_ADDRESS=$($BINARY keys show $KEY1 -a --keyring-backend $KEYRING --home $HOME_DIR)
@@ -77,10 +83,9 @@ RESTPORT=1316
 GRPCPORT=8080
 GRPCWEB=8091
 
-sed -i -e 's#"tcp://0.0.0.0:26656"#"tcp://localhost:'"$P2PPORT"'"#g' $HOME_DIR/config/config.toml
-sed -i -e 's#"tcp://127.0.0.1:26657"#"tcp://localhost:'"$RPCPORT"'"#g' $HOME_DIR/config/config.toml
-sed -i -e 's#"tcp://localhost:26657"#"tcp://localhost:'"$RPCPORT"'"#g' $HOME_DIR/config/client.toml
-sed -i -e 's#"tcp://0.0.0.0:1317"#"tcp://0.0.0.0:'"$RESTPORT"'"#g' $HOME_DIR/config/app.toml
+$SED_BINARY -i -e 's#"tcp://0.0.0.0:26656"#"tcp://localhost:'"$P2PPORT"'"#g' $HOME_DIR/config/config.toml
+$SED_BINARY -i -e 's#"tcp://127.0.0.1:26657"#"tcp://localhost:'"$RPCPORT"'"#g' $HOME_DIR/config/config.toml
+$SED_BINARY -i -e 's#"tcp://0.0.0.0:1317"#"tcp://0.0.0.0:'"$RESTPORT"'"#g' $HOME_DIR/config/app.toml
 
 update_test_genesis '.app_state["gov"]["voting_params"]["voting_period"]="50s"'
 update_test_genesis '.app_state["mint"]["params"]["mint_denom"]="'$DENOM'"'
@@ -110,4 +115,5 @@ $BINARY collect-gentxs --home $HOME_DIR
 # Run this to ensure everything worked and that the genesis file is setup correctly
 # This raises an error since Cudos has an additional genesis Tx : MsgSetOrchestratorAddress
 # $BINARY validate-genesis --home $HOME_DIR
-screen -dmS cudos-node $BINARY start --home $HOME_DIR --grpc.address="0.0.0.0:$GRPCPORT" --grpc-web.address="0.0.0.0:$GRPCWEB"
+touch $HOME_DIR/cudos-log.txt
+screen -dmS cudos-node -L -Logfile $HOME_DIR/cudos-log.txt $BINARY start --home $HOME_DIR --grpc.address="0.0.0.0:$GRPCPORT" --grpc-web.address="0.0.0.0:$GRPCWEB"

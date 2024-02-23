@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+echo ""
+echo "##################"
+echo "#   Setup EVM    #"
+echo "##################"
+echo ""
+
 ROOT=$(pwd)
 HOME=$ROOT/testnet/evm-testnet
 cd etherum
@@ -11,6 +17,12 @@ fi
 
 rm -rf $HOME
 mkdir -p $HOME
+
+# build Axelar contracts
+# check if there is no _build/solidity folder
+if [ ! -d "_build/solidity" ]; then
+  npm run build
+fi
 
 # run new evm node
 touch $HOME/evm-log.txt

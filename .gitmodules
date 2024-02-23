@@ -6,3 +6,7 @@
 	path = deps/axelar-core
 	url = https://github.com/notional-labs/axelar-core.git
 	branch = 0.34.1-cudos-demo
+[submodule "deps/relayer"]
+	path = deps/relayer
+	url = https://github.com/cosmos/relayer.git
+	branch = v2.4.2

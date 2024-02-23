@@ -22,42 +22,48 @@ export CHAIN_ID
 export DEFAULT_KEYS_FLAGS
 export BINARY
 
+# check that testnet/evm-testnet/chain-config/local-evm.json exists
+if [ ! -f "testnet/evm-testnet/chain-config/local-evm.json" ]; then
+  echo "testnet/evm-testnet/chain-config/local-evm.json does not exist"
+  exit 1
+fi
+
 GATEWAY_ID=$(jq -r '.[0].gateway' testnet/evm-testnet/chain-config/local-evm.json)
 TOKEN_ADDRESS=$(jq -r '.[0].tokenDeployAddress' testnet/evm-testnet/chain-config/local-evm.json)
 TX_HASH=$(jq -r '.[0].tokenDeployTxHash' testnet/evm-testnet/chain-config/local-evm.json)
 
 echo "#### 1. Adding EVM chain ####"
-sh "${DIR}/steps/add-evm-chain.sh" ${EVM_CHAIN}
+sh "${DIR}/steps/add-evm-chain.sh" ${EVM_CHAIN} > /dev/null
 
 echo "\n#### 2. Adding Cosmos chain ####"
-sh "${DIR}/steps/add-cosmos-chain.sh" ${COSMOS_CHAIN}
+sh "${DIR}/steps/add-cosmos-chain.sh" ${COSMOS_CHAIN} > /dev/null
 
 echo "\n#### 3. Register Broadcaster ####"
-sh "${DIR}/steps/register-broadcaster.sh"
+sh "${DIR}/steps/register-broadcaster.sh" > /dev/null
 
 echo "\n#### 4. Activate EVM Chains ####"
-sh "${DIR}/steps/activate-evm-chain.sh" ${EVM_CHAIN}
+sh "${DIR}/steps/activate-evm-chain.sh" ${EVM_CHAIN} > /dev/null
 
 echo "\n#### 5. Activate Cosmos Chains ####"
-sh "${DIR}/steps/activate-cosmos-chain.sh" ${COSMOS_CHAIN}
+sh "${DIR}/steps/activate-cosmos-chain.sh" ${COSMOS_CHAIN} > /dev/null
 
 echo "\n#### 6. Register Cosmos native asset ####"
-sh "${DIR}/steps/register-native-asset.sh" ${COSMOS_CHAIN} ${COSMOS_DENOM}
+sh "${DIR}/steps/register-native-asset.sh" ${COSMOS_CHAIN} ${COSMOS_DENOM} > /dev/null
 
 echo "\n#### 7. Set gateway id ####"
-sh "${DIR}/steps/setgateway.sh" ${EVM_CHAIN} "${GATEWAY_ID}"
+sh "${DIR}/steps/setgateway.sh" ${EVM_CHAIN} "${GATEWAY_ID}" > /dev/null
 
 echo "\n#### 8. Register new token to Ethereum ####"
-sh "${DIR}/steps/create-deploy-token.sh" ${EVM_CHAIN} ${EVM_CHAIN} ${EVM_DENOM} "${EVM_TOKEN_NAME}" ${EVM_TOKEN_SYMBOL} "${TOKEN_ADDRESS}"
+sh "${DIR}/steps/create-deploy-token.sh" ${EVM_CHAIN} ${EVM_CHAIN} ${EVM_DENOM} "${EVM_TOKEN_NAME}" ${EVM_TOKEN_SYMBOL} "${TOKEN_ADDRESS}" > /dev/null
 
 echo "\n#### 9. Confirm deploy token ####"
-sh "${DIR}/steps/confirm-deploy-token.sh" ${EVM_CHAIN} ${EVM_CHAIN} ${EVM_DENOM} "${TX_HASH}"
+sh "${DIR}/steps/confirm-deploy-token.sh" ${EVM_CHAIN} ${EVM_CHAIN} ${EVM_DENOM} "${TX_HASH}" > /dev/null
 
 echo "\n#### 10. Register Cosmos support aUSDC asset ####"
-sh "${DIR}/steps/foregin-asset.sh" ${COSMOS_CHAIN} ${EVM_DENOM}
+sh "${DIR}/steps/foregin-asset.sh" ${COSMOS_CHAIN} ${EVM_DENOM} > /dev/null
 
 echo "\n#### 11. Register Axelar support aUSDC asset ####"
-sh "${DIR}/steps/foregin-asset.sh" ${AXELAR_CHAIN} ${EVM_DENOM}
+sh "${DIR}/steps/foregin-asset.sh" ${AXELAR_CHAIN} ${EVM_DENOM} > /dev/null
 
 echo "\n#### 12. Getting all info after set up####"
 sh "${DIR}/getting-all-info.sh" ${COSMOS_CHAIN} ${EVM_CHAIN}
