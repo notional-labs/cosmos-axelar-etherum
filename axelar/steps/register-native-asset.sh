@@ -1,7 +1,7 @@
 #!/bin/sh
 
 CHAIN=$1
-DENOM=${2:-uumee}
+DENOM=${2:-acudos}
 
 if [ -z "$CHAIN" ]
 then
@@ -14,6 +14,7 @@ $BINARY tx axelarnet register-asset ${CHAIN} ${DENOM} --is-native-asset --genera
 --chain-id ${CHAIN_ID} --from $($BINARY keys show governance -a ${DEFAULT_KEYS_FLAGS}) ${DEFAULT_KEYS_FLAGS} \
 --output json --gas 500000 &> ${NODE_HOME}/unsigned_msg.json
 cat ${NODE_HOME}/unsigned_msg.json
-#echo "Registered asset ${CHAIN} ${DENOM}"
 
 sh ./axelar/bin/libs/broadcast-unsigned-multi-tx.sh
+
+echo "Registered asset ${CHAIN} ${DENOM}"

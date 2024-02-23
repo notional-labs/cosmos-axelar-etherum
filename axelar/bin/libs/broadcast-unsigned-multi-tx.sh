@@ -12,4 +12,10 @@ $BINARY tx multisign ${NODE_HOME}/unsigned_msg.json governance ${NODE_HOME}/sign
 cat ${NODE_HOME}/tx-ms.json
 
 ## Broadcast multisigned transaction.
-$BINARY tx broadcast ${NODE_HOME}/tx-ms.json ${DEFAULT_KEYS_FLAGS} --sign-mode amino-json
+res=$($BINARY tx broadcast ${NODE_HOME}/tx-ms.json ${DEFAULT_KEYS_FLAGS} --sign-mode amino-json)
+
+## get code:0 from res to check for success
+if ! echo "$res" | grep -q '"code":0'; then
+  echo "Error broadcasting transaction: $res"
+  exit 1
+fi

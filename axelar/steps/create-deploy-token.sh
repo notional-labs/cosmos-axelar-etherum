@@ -19,4 +19,3 @@ $BINARY tx evm create-deploy-token "${EVM_CHAIN}" "${ORIGIN_CHAIN}" "${ORIGIN_AS
 cat ${NODE_HOME}/unsigned_msg.json
 
 sh ./axelar/bin/libs/broadcast-unsigned-multi-tx.sh
-
