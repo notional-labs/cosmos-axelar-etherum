@@ -39,9 +39,10 @@ run-ibc-send:
 
 clean-up:
 	@echo "Killing binaries and removing previous data"
-	-@pkill $(CUDOS_BINARY) || true
-	-@pkill $(AXELAR_BINARY) || true
-	-@pkill rly || true
+	-@pkill cudos-noded || true
+	-@pkill axelard || true
+	-@pkill relayer || true
 	-@kill -9 $(lsof -i :7545 | awk 'NR>1 {print $2}') || true
 	-@rm -rf ./testnet || true
-	-@screen -wipe
+	-@screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs -I {} screen -X -S {} quit
+	

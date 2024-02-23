@@ -18,6 +18,9 @@ echo "tx send: $TX_SEND"
 echo "#### 1. Verify transaction ####"
 sh ./axelar/steps/verify-gateway-txn.sh "${EVM_CHAIN}" "${TX_SEND}"
 
+# get the destination address
+
+
 sleep 5
 echo "#### 2. Send IBC ####"
 $BINARY tx axelarnet route-ibc-transfers --from gov1 --keyring-backend test --home ${NODE_HOME}
