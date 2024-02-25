@@ -19,14 +19,9 @@ echo "tx send: $TX_SEND"
 echo "#### 1. Verify transaction ####"
 sh ./axelar/steps/verify-gateway-txn.sh "${EVM_CHAIN}" "${TX_SEND}"
 
-sleep 5
-echo "#### 2. verify transactions included in block ####"
-
-
-
-echo "#### 3. Send IBC ####"
+echo "#### 2. Send IBC ####"
 $BINARY tx axelarnet route-ibc-transfers --from gov1 --keyring-backend test --home ${NODE_HOME}
 
-sleep 10
-echo "#### 4. Verify received tokens on Cudos ####"
+sleep 5
+echo "#### 3. Verify received tokens on Cudos ####"
 $CUDOS_BINARY q bank balances cudos1mjk79fjjgpplak5wq838w0yd982gzkyfz8xprw --node http://localhost:16657
