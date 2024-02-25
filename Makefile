@@ -42,6 +42,6 @@ clean-up:
 	-@pkill cudos-noded || true
 	-@pkill axelard || true
 	-@pkill relayer || true
-	-@kill -9 $(lsof -i :7545 | awk 'NR>1 {print $2}') || true
+	-@lsof -ti :7545 | xargs -r kill -9
 	-@rm -rf ./testnet || true
 	-@screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs -I {} screen -X -S {} quit
