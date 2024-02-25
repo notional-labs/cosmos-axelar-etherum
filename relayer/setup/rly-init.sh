@@ -35,16 +35,17 @@ $BINARY paths add $CHAINID_1 $CHAINID_2 cudos-axelar --file ./relayer/setup/path
 echo "Restoring accounts..."
 $BINARY keys restore $CHAINID_1 testkey "$MNEMONIC_1" --home $CHAIN_DIR/$RELAYER_DIR
 $BINARY keys restore $CHAINID_2 testkey "$MNEMONIC_2" --home $CHAIN_DIR/$RELAYER_DIR
+#
+#echo "Creating clients and a connection..."
+#$BINARY tx connection $RELAY_PATH --home $CHAIN_DIR/$RELAYER_DIR
+#
+#echo "Creating a channel..."
+#$BINARY tx channel $RELAY_PATH --home $CHAIN_DIR/$RELAYER_DIR
 
-echo "Creating clients and a connection..."
-$BINARY tx connection $RELAY_PATH --home $CHAIN_DIR/$RELAYER_DIR
-
-echo "Creating a channel..."
-$BINARY tx channel $RELAY_PATH --home $CHAIN_DIR/$RELAYER_DIR
-
+rly tx link $RELAY_PATH -d -t 3s --home $CHAIN_DIR/$RELAYER_DIR
 echo "Starting to listen relayer..."
 touch $CHAIN_DIR/$RELAYER_DIR/relayer-log.txt
-screen -L -Logfile $CHAIN_DIR/$RELAYER_DIR/relayer-log.txt -dmS relayer $BINARY start $RELAY_PATH -p events -b 100 --home $CHAIN_DIR/$RELAYER_DIR
+screen -L -Logfile $CHAIN_DIR/$RELAYER_DIR/relayer-log.txt -dmS relayer $BINARY start $RELAY_PATH --home $CHAIN_DIR/$RELAYER_DIR
 
 echo ""
 echo "############################"

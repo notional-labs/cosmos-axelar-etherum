@@ -14,7 +14,7 @@ async function execute(chains, wallet, options = {}) {
     const destinationChain = args[1] || 'cudos'
     const destinationAddress = args[2] || 10e6;
     const amount = args[3] || 10e6;
-    const symbol = 'aUSDC';
+    const symbol = 'CudosToken';
 
     for (const chain of [source]) {
         const provider = getDefaultProvider(chain.rpc);

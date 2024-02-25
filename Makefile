@@ -25,7 +25,7 @@ run-axelar-node: update-gitsubmodule
 	./axelar/setup.sh # setup chain related
 
 init-chains: clean-up
-	$(MAKE) run-cudos-node # run cudos node at port 16657
+	./cudos/run-cudos-node.sh $(CUDOS_BINARY) # run cudos node at port 16657
 	sleep 5
 	./etherum/init-evm.sh # run etherum testnet, rpc port 7545
 	sleep 5
@@ -45,4 +45,3 @@ clean-up:
 	-@kill -9 $(lsof -i :7545 | awk 'NR>1 {print $2}') || true
 	-@rm -rf ./testnet || true
 	-@screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs -I {} screen -X -S {} quit
-	

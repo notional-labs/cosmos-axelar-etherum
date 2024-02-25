@@ -27,6 +27,6 @@ echo "#### 2. verify transactions included in block ####"
 echo "#### 3. Send IBC ####"
 $BINARY tx axelarnet route-ibc-transfers --from gov1 --keyring-backend test --home ${NODE_HOME}
 
-sleep 5
+sleep 10
 echo "#### 4. Verify received tokens on Cudos ####"
 $CUDOS_BINARY q bank balances cudos1mjk79fjjgpplak5wq838w0yd982gzkyfz8xprw --node http://localhost:16657
